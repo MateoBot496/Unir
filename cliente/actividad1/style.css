@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 90vh;
+
+}
+
+.h100{
+    height: 200px;
+    background-color: aliceblue;
+}
+
+#contenedorTabla{
+    padding: 2vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+    background-color: lightblue;
+    flex: 1;
+}
+
+
+
+.total{
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+    background-color: lightblue;
+    min-width: 20%;
+}
+
+.hfull{
+    height: 100%;
+}
+
+.flex1{
+    flex: 1;
+}
