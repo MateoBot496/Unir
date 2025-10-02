@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             //Añadimos el div, para poder contener los botones y el input
             let unidades = 0;
             const cantidadTd = document.createElement('td');
-            cantidadTd.classList.add( 'align-middle');
+            cantidadTd.classList.add('d-flex', 'align-middle', 'justify-content-center', 'h50');
 
             const divCantidad = document.createElement('div');
             divCantidad.classList.add('d-flex', 'gap-2');

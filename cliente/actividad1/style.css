@@ -13,6 +13,9 @@ body{
     background-color: aliceblue;
 }
 
+.h50{
+    height: 8vh;
+}
 #contenedorTabla{
     padding: 2vh;
     border-radius: 10px;
