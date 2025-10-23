@@ -2,13 +2,14 @@ from producto import producto
 from logic import productos, get_productos, create_producto, update_producto, delete_producto
 
 if __name__ == "__main__":
-    #Creamos la lista productos y la variable next_id para dar una sensacion de autoincrement       
 
-    #Esto es el menú:
+    
 
-
+    #Variable para no usar break en el menú
     salir = False
 
+
+    #Esto es el menú:
     while salir == False:
         print("")
         print("Menu:")

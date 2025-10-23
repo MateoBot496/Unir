@@ -1,5 +1,6 @@
 from producto import producto
 
+#Creamos lista productos
 productos = []
 
 #Metemos 4 items dentro de la lista productos
@@ -47,6 +48,7 @@ def create_producto():
         print("ERROR: Cantidad debe ser un numero.")
         return
 
+    #Creamos un nuevo producto y lo metemos en la lista
     new_producto = producto(name, precio, cantidad)
     productos.append(new_producto)
     print(new_producto)
@@ -94,6 +96,7 @@ def update_producto():
         print("ERROR: Cantidad debe ser un numero.")
         return
 
+    #Encontramos el producto segun el ID, y cambiamos los valores.
     for p in productos:
         if p.id == id:
             p.nombre = name
@@ -117,6 +120,7 @@ def delete_producto():
         print("ERROR: ID debe ser un numero.")
         return
     
+    #Encontramos el producto segun el ID, y lo borramos.
     for p in productos:
         if p.id == id :
             productos.remove(p)

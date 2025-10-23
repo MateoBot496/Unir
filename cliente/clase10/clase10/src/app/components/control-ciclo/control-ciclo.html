@@ -1,0 +1,14 @@
+<div class="ciclo">
+  <h2>Control de Ciclo works!</h2>
+
+  <button (click)="cambiarNombre()">Cambiar nombre</button>
+  <button (click)="crearHijo()">Mostrar hijo</button>
+  <button (click)="destruirHijo()">Borrar hijo</button>
+
+  @if (mostrarHijo) {
+  <app-hijo [nombre]="nombre"></app-hijo>
+  } @else {
+    <p>El componente hijo ha sido destruido.</p>
+  }
+
+</div>

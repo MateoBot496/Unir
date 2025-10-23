@@ -1,4 +1,6 @@
 class producto: #Definimos la clase producto
+
+    #Ponemos esta var id para dar sensacion de auto_increment cada vez que creamos un nuevo producto.
     id = 1
     
     def __init__(self, nombre, precio, cantidad):
