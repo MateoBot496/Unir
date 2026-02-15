@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          # cache: 'npm'   # opcional, pero sin cache-dependency-path por ahora
 
       - name: Install dependencies
         working-directory: cliente/Examen2Practica/examen
@@ -29,4 +30,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: cliente/Examen2Practica/examen/dist/examen
-
