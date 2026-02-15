@@ -1,0 +1,31 @@
+<hr>
+<hr>
+<h1>Formulario validado</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="nombre">Nombre:</label>
+  <input id="nombre" formControlName="nombre" type="text" />
+  <div *ngIf="form.get('nombre')?.invalid && form.get('nombre')?.touched">
+    <small *ngIf="form.get('nombre')?.errors?.['required']">El nombre es obligatorio.</small>
+    <small *ngIf="form.get('nombre')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</small>
+    <small *ngIf="form.get('nombre')?.errors?.['pattern']">El nombre solo debe contener letras.</small>
+  </div>
+  <br /><br />
+
+  <label for="email">Email:</label>
+  <input id="email" formControlName="email" type="email" />
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    <small *ngIf="form.get('email')?.errors?.['required']">El email es obligatorio.</small>
+    <small *ngIf="form.get('email')?.errors?.['email']">El email no es válido.</small>
+  </div>
+  <br /><br />
+
+  <label for="edad">Edad:</label>
+  <input id="edad" formControlName="edad" type="number" />
+  <div *ngIf="form.get('edad')?.invalid && form.get('edad')?.touched">
+    <small *ngIf="form.get('edad')?.errors?.['required']">La edad es obligatoria.</small>
+    <small *ngIf="form.get('edad')?.errors?.['edadInvalida']">La edad debe estar entre 18 y 65 años.</small>
+  </div>
+  <br /><br />
+
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>

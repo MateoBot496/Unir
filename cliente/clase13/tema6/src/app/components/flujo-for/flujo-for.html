@@ -1,0 +1,14 @@
+<p>flujo-for works!</p>
+
+<button (click)="limpiarLista()">Vaciar Lista</button>
+<button (click)="restaurarLista()"> restaurarLista </button>
+
+@for (estudiante of estudiantes(); track estudiante.id; let i = $index, total = $count, first = $first, last = $last) {
+  <div>
+    <p>Índice: {{ i + 1}} / {{total}}</p>
+    <p>Id: {{ estudiante.id }}</p>
+    <p>Nombre: {{ estudiante.nombre }}</p>
+    <p>Edad: {{ estudiante.edad }}</p>
+    <hr />
+  </div>
+}

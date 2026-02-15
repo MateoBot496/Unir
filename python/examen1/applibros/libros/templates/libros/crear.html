@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'libros/styles.css' %}">
+
+    </head>
+    <body> 
+        <div class="header">
+            <h1>EXAMEN JOSE MATEO MONTES ACOSTA</h1>
+            <a href="{% url 'lista_libros' %}">VOLVER A TODOS LOS LIBROS</a>
+        </div>
+        
+        <h1>Añadir nuevo libro</h1>
+
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+            <div style="color:#b00020">
+                {% for e in form.non_field_errors %}<p>{{ e }}</p>{% endfor %}
+            </div>
+            {% endif %}
+
+            {% for field in form %}
+            <div style="margin-bottom:10px">
+                <label for="{{ field.id_for_label }}"><strong>{{ field.label }}:</strong></label><br>
+                {{ field }}
+                {% if field.help_text %}<small>{{ field.help_text }}</small>{% endif %}
+                {% if field.errors %}
+                <div style="color:#b00020">
+                    {% for e in field.errors %}<p>{{ e }}</p>{% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+            <button type="submit">Guardar</button>
+            <a href="{% url 'lista_libros' %}">Cancelar</a>
+        </form>
+
+    </body>
+</html>

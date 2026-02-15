@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+    <h2>{{ postId ? 'Editar post' : 'Nuevo post' }}</h2>
+  <label for="title">Title:</label>
+  <input id="title" formControlName="title" />
+
+  <label for="body">Body:</label>
+  <textarea id="body" formControlName="body"></textarea>
+
+  <button type="submit">Create Post</button>
+</form>

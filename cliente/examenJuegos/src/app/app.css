@@ -1,0 +1,12 @@
+.juego{
+  width: 500px;
+  padding: 2vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-wrap-mode: wrap;
+  gap: 1vh;
+  background-color: rgb(216, 238, 237);
+}

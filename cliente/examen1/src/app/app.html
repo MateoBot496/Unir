@@ -1,0 +1,30 @@
+<h1>Formulario</h1>
+<form (submit)="publicar($event, titulo.value, imagen.value, descripcion.value, fecha.value)" class="form">
+  <label>Titulo</label>
+  <input type="text" #titulo />
+
+  <label>Imagen</label>
+  <input type="text" #imagen />
+
+  <label>Descripcion</label>
+  <input type="text" #descripcion />
+
+  <label>Fecha de publicacion</label>
+  <input type="text" #fecha />
+
+  <button type="submit">Enviar</button>
+</form>
+
+<h2>Lista</h2>
+@for (noticia of noticias; track $index) {
+  <div class="noticiaCard">
+    <h3>{{noticia.titulo}}</h3>
+    {{noticia.descripcion}}
+    <hr>
+    <img [src]="noticia.imagen" alt="">
+    <hr>
+    Fecha publicacion: {{noticia.fecha_publicacion}}
+  </div>
+}
+
+<router-outlet />

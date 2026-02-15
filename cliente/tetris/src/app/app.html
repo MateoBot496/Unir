@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="game">
+    @for (row of board; track r; let r = $index) {
+
+      @for(col of row; track c; let c = $index){
+        @if (board[r][c] == 0) {
+          <div class="gamecell">
+          </div>
+        }@else {
+          <div class="gamecell2">
+          </div>
+        }
+
+
+      }
+    }
+  </div>
+  <div class="score"></div>
+</div>
+
+
+<router-outlet />

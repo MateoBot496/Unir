@@ -1,0 +1,27 @@
+<p>flujo-switch works!</p>
+
+<label for="rol">Selecciona un rol</label>
+<select id="rol" (change)="cambiarRol($event.target)">
+
+  @for(rol of roles; track $index){
+    <option [value] = "rol">{{ rol }}</option>
+  }
+
+</select>
+
+<p>Rol seleccionado: {{ rol() }}</p>
+
+@switch (rol()) {
+  @case ('admin') {
+    <p style="color: aliceblue; background-color: black;">Bienvenido, administrador. Tienes acceso total al sistema.</p>
+  }
+  @case ('editor') {
+    <p>Hola, editor. Puedes modificar el contenido existente.</p>
+  }
+  @case ('viewer') {
+    <p>Saludos, viewer. Solo puedes ver el contenido.</p>
+  }
+  @default {
+    <p>Rol desconocido. Por favor, selecciona un rol válido.</p>
+  }
+}

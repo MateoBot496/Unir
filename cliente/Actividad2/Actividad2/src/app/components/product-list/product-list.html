@@ -1,0 +1,5 @@
+<div class="product-list">
+  @for (producto of productos; track $index) {
+    <app-product-card [product]="producto" (eliminar)="onEliminar($event)"></app-product-card>
+  }
+</div>

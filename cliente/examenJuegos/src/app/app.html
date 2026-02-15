@@ -1,0 +1,9 @@
+@for (juego of juegos; track $index) {
+  <div class="juego">
+    <h2>{{juego.nombre}}</h2>
+    <img [src]=juego.imagen [alt]=juego.nombre>
+    <p> {{juego.plataforma}} - Año: {{juego.anio}}</p>
+  </div>
+}
+
+<router-outlet />

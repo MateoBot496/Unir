@@ -1,0 +1,31 @@
+<h1>Formulario</h1>
+<form (submit)="publicar($event, nombre.value, imagen.value, plataforma.value, anio.valueAsNumber)">
+  <label>Nombre</label>
+  <input type="text" #nombre />
+
+  <label>Imagen</label>
+  <input type="text" #imagen />
+
+  <label>Plataforma</label>
+  <input type="text" #plataforma />
+
+  <label>Año de lanzamiento</label>
+  <input type="number" #anio />
+
+  <button type="submit">Submit</button>
+</form>
+
+
+<div class="listado">
+
+
+  @for (juego of juegos; track $index) {
+    <div class="juego">
+      <h2>{{juego.titulo}}</h2>
+      <img [src]="juego.imagen" alt="{{juego.titulo}}" />
+      <p>Plataforma: {{juego.plataforma}}</p>
+      <p>Año de lanzamiento: {{juego.anio}}</p>
+    </div>
+  }
+</div>
+<router-outlet />

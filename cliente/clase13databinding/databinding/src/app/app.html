@@ -1,0 +1,18 @@
+<div >
+
+  <h1>Capturar eventos de usuario</h1>
+  <h2>
+    <button (click)="onClick()">
+
+    {{clicks()}} veces has hecho clic.
+    </button>
+
+
+  </h2>
+
+  <input type="text" [value]="ultimaTecla()" (keydown)="onKeyDown($event)" />
+  <p>{{ultimaTecla() | json}}</p>
+
+</div>
+
+<router-outlet />

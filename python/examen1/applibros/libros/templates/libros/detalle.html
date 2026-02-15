@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'libros/styles.css' %}">
+
+    </head>
+    <body> 
+        <div class="header">
+            <h1>EXAMEN JOSE MATEO MONTES ACOSTA</h1>
+            <a href="{% url 'lista_libros' %}">VOLVER A TODOS LOS LIBROS</a>
+        </div>
+        
+
+        <div class="librocard">
+            <h3>{{libro.titulo}}</h3>
+            <p>Autor : {{libro.autor}} </p>
+            <p>{{libro.fecha_publicacion}} </p>
+            <p>{{libro.paginas}} páginas.</p>
+        </div>
+
+    </body>
+</html>

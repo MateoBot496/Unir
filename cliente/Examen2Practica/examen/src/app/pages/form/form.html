@@ -1,0 +1,24 @@
+<div class="form">
+  <h1>Formulario de usuario</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="name">Nombre:</label>
+    <input id="name" formControlName="name" type="text" />
+    @if (form.get('name')?.invalid && form.get('name')?.touched) {
+      <p class="error">El nombre es obligatorio y debe tener al menos 3 caracteres.</p>
+    }
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" />
+    @if (form.get('email')?.invalid && form.get('email')?.touched) {
+      <p class="error">El email es obligatorio y debe ser válido.</p>
+    }
+
+    <label for="password">Nombre de usuario:</label>
+    <input id="password" formControlName="username" type="text" />
+    @if (form.get('username')?.invalid && form.get('username')?.touched) {
+      <p class="error">El nombre de usuario es obligatorio y debe tener al menos 5 caracteres.</p>
+    }
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>

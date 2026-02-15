@@ -1,0 +1,67 @@
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="#">
+      José Mateo Montes Acosta  \\ Gestión de Productos
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="container mb-5">
+
+  <app-product-form (nuevoProducto)="onProductoCreado($event)"></app-product-form>
+  <app-product-filter></app-product-filter>
+  <app-product-list></app-product-list>
+
+<!-- si tienes lista, va debajo -->
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-light border-top py-4 mt-auto">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        <span class="text-muted">
+          © 2025 · Actividad DWEC · Angular 18
+        </span>
+      </div>
+
+      <div class="col-md-6 text-center text-md-end">
+        <a href="#" class="text-muted text-decoration-none me-3">Privacidad</a>
+        <a href="#" class="text-muted text-decoration-none">Contacto</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<router-outlet />

@@ -1,0 +1,40 @@
+
+.main{
+  border: 2px solid red;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  background-color: rgb(175, 174, 174);
+}
+
+.game{
+
+  border: 2px solid blue;
+  width: 513px;
+  height: 1030px;
+  gap: 1px;
+
+
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+}
+
+.score{
+  border: 2px solid greenyellow;
+  width: 513px;
+  height: 1030px;
+}
+
+.gamecell{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+.gamecell2{
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}

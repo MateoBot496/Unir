@@ -1,0 +1,46 @@
+/* Ajustes básicos para margenes de la pagina */
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+/* Contenedor que organiza las tarjetas en una grid, width 100 para que ocupe todo el body*/
+.team{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5vh;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+/* Tarjeta de jugador con diseño en color azulado, con borde, centrado con flex y con sombra */
+.player-card{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(169, 203, 233);
+    box-shadow: 10px 10px 5px grey;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     
+}
+
+/* Estilo del nombre del jugador, cambiar la letra, y el estilo */
+
+.player-card h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;     
+}
+
+/*Otro cambio de letra para el numero y nombre*/
+.player-card p{
+    font-style: italic;      
+}
+
+/*Ya que el grid es responsive, le ponemos un width 100% a las imagenes para que se adapten al contenedor.*/
+.player-photo {
+    width: 100%;
+    height: auto;            
+}

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  background-color: aliceblue;
+}
+
+app-root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+  gap: 1vh;
+
+}

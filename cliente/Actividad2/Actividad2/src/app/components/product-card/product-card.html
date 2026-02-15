@@ -1,0 +1,20 @@
+<div id="pruductCard" class="product-item border p-3 mb-3 d-flex flex-column gap-2">
+
+  <h2 class="h5">{{ product.name }}</h2>
+  <p class="mb-1">{{ product.description }}</p>
+  <p class="fw-bold">$ {{ product.price }}</p>
+  <img
+    [src]="product.image"
+    alt=""
+    class="img-fluid"
+    style="width: 200px; height: 200px; object-fit: cover;"
+  />
+  <div class="mb-0 mt-auto d-flex flex-column gap-2 justify-content-between">
+
+    <button class="btn btn-primary">Add to Cart</button>
+    <button class="btn btn-danger" (click)="eliminarProducto()" >
+      Eliminar
+    </button>
+
+  </div>
+</div>
